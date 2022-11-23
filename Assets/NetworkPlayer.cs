@@ -13,7 +13,8 @@ public class NetworkPlayer : NetworkBehaviour
     {
         base.OnNetworkSpawn();
 
-        playerController.enabled = IsOwner;
+        //on ne désactibe plus le playerController maintenant 
+        //playerController.enabled = IsOwner;
         playerCam.Priority = IsOwner ? 1 : 0;
     }
 }
